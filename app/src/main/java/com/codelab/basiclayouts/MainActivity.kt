@@ -201,7 +201,13 @@ fun HomeSection(
 ) {
     // Implement composable here
     Column(modifier) {
-        Text(stringResource(title))
+        Text(
+            stringResource(title),
+            style = MaterialTheme.typography.titleMedium,
+            modifier = Modifier
+                .paddingFromBaseline(top = 40.dp, bottom = 16.dp)
+                .padding(horizontal = 16.dp)
+        )
         content()
     }
 }
