@@ -317,6 +317,19 @@ private fun SootheNavigationRail(modifier: Modifier = Modifier) {
                 selected = true,
                 onClick = {}
             )
+            NavigationRailItem(
+                icon = {
+                    Icon(
+                        imageVector = Icons.Default.AccountCircle,
+                        contentDescription = null
+                    )
+                },
+                label = {
+                    Text(stringResource(R.string.bottom_navigation_profile))
+                },
+                selected = false,
+                onClick = {}
+            )
         }
     }
 }
