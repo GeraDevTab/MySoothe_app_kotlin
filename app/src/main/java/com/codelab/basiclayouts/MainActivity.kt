@@ -17,6 +17,7 @@
 package com.codelab.basiclayouts
 
 import android.os.Bundle
+import android.widget.Space
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.annotation.DrawableRes
@@ -27,6 +28,7 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.heightIn
@@ -299,9 +301,14 @@ fun MySootheAppPortrait() {
 private fun SootheNavigationRail(modifier: Modifier = Modifier) {
     // Implement composable here
     NavigationRail(
+        modifier = modifier.padding(start = 8.dp, end = 8.dp),
+        containerColor = MaterialTheme.colorScheme.background,
 
     ) {
         Column(
+            modifier = modifier.fillMaxHeight(),
+            verticalArrangement = Arrangement.Center,
+            horizontalAlignment = Alignment.CenterHorizontally
 
         ) {
             NavigationRailItem(
@@ -317,6 +324,9 @@ private fun SootheNavigationRail(modifier: Modifier = Modifier) {
                 selected = true,
                 onClick = {}
             )
+
+            Spacer(modifier = Modifier.height(8.dp))
+
             NavigationRailItem(
                 icon = {
                     Icon(
